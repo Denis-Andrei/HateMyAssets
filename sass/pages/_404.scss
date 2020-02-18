@@ -1,0 +1,18 @@
+.page-404{
+    text-align: center;
+    margin: 20rem;
+
+    a{
+        color: $color-primary-darker;
+    }
+
+    @include responsive(tab-large){
+        margin: 20rem 10rem;
+    }
+    
+    @include responsive(tab-small){
+        margin: 20rem 2rem;
+    }
+    
+}
+

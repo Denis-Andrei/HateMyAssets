@@ -1,0 +1,66 @@
+.features-section,
+.mp-recycling-section, 
+.choose-section, 
+.how-it-works , 
+.newsletter-section,
+.news-section,
+.header-page,
+//SECTIONS SECOND PAGES
+.process-section,
+.services-section,
+.about-section,
+.contact-section,
+.faq-section,
+.privacy-section{
+    padding: 5rem 10%;
+}
+
+@include responsive(laptop-small){  
+
+    //HOMEPAGE SECTIONS
+    .features-section,
+    .mp-recycling-section, 
+    .choose-section, 
+    .how-it-works , 
+    .newsletter-section,
+    .news-section,
+    .header-page,
+    //SECTIONS SECOND PAGES
+    .process-section,
+    .services-section,
+    .about-section,
+    .contact-section,
+    .faq-section,
+    .privacy-section{
+        padding: 5rem 5%;
+    }
+
+    .contact-section{
+        padding-top: 15rem;
+    }
+
+
+}
+@include responsive(tab-small){  
+
+    //HOMEPAGE SECTIONS
+    .features-section,
+    .features-section,
+    .mp-recycling-section, 
+    .choose-section, 
+    .how-it-works , 
+    .newsletter-section,
+    .news-section,
+    .header-page,
+    //SECTIONS SECOND PAGES
+    .process-section,
+    .services-section,
+    .about-section,
+    .contact-section,
+    .faq-section,
+    .privacy-section{
+        padding: 5rem 2%;
+    }
+
+}
+

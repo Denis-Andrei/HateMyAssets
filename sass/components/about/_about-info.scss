@@ -1,0 +1,87 @@
+.about-info{
+
+    &-experience,&-goal{
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(35rem, 1fr));
+        grid-gap: 3rem;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+
+        @include responsive(tab-small){
+            grid-template-columns: 100%;
+        }
+        
+        &-img{
+            width: 100%;
+            grid-row: 1/3;
+            padding: 2rem;
+            box-shadow: 1px 1px 4px rgb(212, 212, 212);
+            border-radius: 3px;
+
+            @include responsive(tab-small){
+                width: 70%;
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            @include responsive(phone){
+                width: 100%;
+            }
+        }
+        
+        &-heading{ 
+            align-self: flex-end;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            
+            @include responsive(tab-small){
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+        }
+
+        &-text{
+           align-self: flex-start;
+            grid-column: 2/3;
+           
+            
+            @include responsive(tab-small){
+                grid-column: 1/2;
+                grid-row: 3/4;
+                padding: 0 2rem;
+            }
+        }
+    }
+
+    &-goal{
+        
+        &-img{
+            width: 100%;
+            grid-column: 2/3;
+            @include responsive(tab-small){
+                width: 70%;
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+            @include responsive(phone){
+                width: 100%;
+            }
+        }
+        &-heading{
+            grid-column: 1/2;
+            @include responsive(tab-small){
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+        }
+        &-text{
+            grid-column: 1/2;
+
+            @include responsive(tab-small){
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+        }
+    }
+}

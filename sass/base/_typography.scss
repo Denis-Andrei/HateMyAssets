@@ -1,0 +1,114 @@
+
+.heading-1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+    
+
+    &--green{
+        color: $color-primary;
+        @include responsive(phone){  
+            font-size: 4.5rem;
+        }
+    }
+
+    &--main{
+        @include responsive(phone){  
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+.heading-2{
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+
+    &--black{
+        color: $color-black;
+    }
+
+    &--white{
+        color: $color-white;
+    }
+
+    &--green-thin{
+        font-weight: 300;
+        color: $color-primary;
+    }
+
+    &--green-bold{
+        font-weight: 600;
+        color: $color-primary;
+    }
+
+}
+
+.heading-3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+     
+
+    &--black{
+        color: $color-black; 
+    }
+
+    &--gray{
+        color: $color-gray;
+    }
+
+    &--green-thin{
+        color: $color-primary;  
+        font-weight: 300;
+    }
+}
+
+
+.subheading-thin{
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center;
+
+    &--gray{
+        color: $color-gray;
+    }
+
+    &--white{
+        color: $color-white;
+    }
+
+    &--green{
+        color: $color-primary;
+    }
+
+}
+
+
+.text-default{
+    font-size: 1.8rem;
+    color: $color-gray;
+    text-align: center;
+
+    &--thin{
+        font-weight: 300;
+    }
+
+    &--bold-green{
+        font-weight: 600;
+        color: $color-primary;
+    }
+}
+.text-bigger{
+    font-size: 2.2rem;
+    color: $color-gray;
+    text-align: center;
+}
+
+
+
+

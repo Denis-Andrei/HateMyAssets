@@ -1,0 +1,26 @@
+.faq-section{
+
+    &__container{
+        .collapsible-menu{
+            margin: 1rem 0;
+        }
+         .collapsible-menu__btn, .collapsible-menu__content{
+             width: 90%;
+             margin: 0 auto;
+             
+             @include responsive(tab-large){
+                 width: 100%;
+             }
+         }
+         .collapsible-menu__btn{
+            border: 2px solid $color-gray;
+
+            &:hover, &:focus{
+                color: $color-primary-darker;
+                border: 2px solid $color-primary-darker;
+            }
+         }
+        
+        
+    }
+}

@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 80%;
+    scroll-behavior: smooth;
+
+    @include responsive(desktop){
+        font-size: 62.5%;
+    }
+    @include responsive(laptop-large){
+        font-size: 60%;
+    }
+    @include responsive(laptop-small){
+        font-size: 58%;
+    }
+    @include responsive(tab-large){
+        font-size: 55%;       
+    }
+    @include responsive(tab-small){
+        font-size: 53%;       
+    }
+
+    @include responsive(phone){
+        font-size: 50%;       
+    }
+    
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    
+  
+}

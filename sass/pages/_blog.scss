@@ -1,0 +1,48 @@
+.blog{
+    
+    &__container{
+        width: 60%;
+        margin: 5rem auto;
+
+        @include responsive(laptop-large){  
+            
+            width: 80%;
+        }
+        @include responsive(tab-small){  
+            
+            width: 70%;
+        }
+        @include responsive(phone){  
+      
+            width: 90%;
+        }
+    }
+}
+
+.single-post{
+
+    &__container{
+        background-color: $color-gray-lighter;
+        padding: 5rem;
+        width: 70%;
+        margin: 5rem auto;
+        @include responsive(tab-small){  
+            width: 80%;
+        }
+        @include responsive(phone){  
+            width: 100%;
+        }
+    }
+
+    &__text{
+        // border-top: 1px solid $color-primary;
+        text-align: left;
+        // padding: 2rem 0;
+        letter-spacing: .5px;
+    }
+
+    .the_champ_counter_container, .the_champ_sharing_container{
+        margin: 2rem 0;
+    }
+
+}

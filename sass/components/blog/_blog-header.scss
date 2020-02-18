@@ -1,0 +1,72 @@
+.blog-header{
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+
+    &__info{
+        
+        height: 100%;
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+        color: $color-gray-lighter;
+        text-align: center;
+
+        @include responsive(tab-large){  
+            width: 90%;
+        }
+
+        &-subheading{
+            margin: 2rem;
+
+            a{ // For single post page
+                font-weight: 400;
+                text-decoration: none;
+                color: $color-primary;
+
+                &:hover{
+                    color: $color-primary-darker;
+                }
+            }
+        }
+
+        &-form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(phone){
+                flex-direction: column;
+            }
+
+            &-search{
+                background-color: $color-gray-lighter;
+                width: 30rem;
+                margin: 2rem 1rem;
+                padding: 1rem;
+                border: 1px solid $color-gray-lighter;
+                outline: none;
+                border-radius: 3px;
+    
+                &:focus{
+                    background-color: $color-primary-lighter;
+                }
+            }
+
+            &-btn{
+                padding: 1rem;
+            }
+
+           
+        }
+
+        
+    }
+}

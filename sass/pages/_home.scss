@@ -1,0 +1,252 @@
+.features-section{
+    position: relative;
+
+    &__container{
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-column-gap: 4rem;
+        justify-items: center;
+
+        @include responsive(tab-large){  
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        }
+
+        @include responsive(tab-small){  
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 4rem;
+        }
+        @include responsive(phone){  
+           grid-column-gap: 1rem;
+           grid-row-gap: 2rem;
+        }
+    }      
+    
+}
+
+
+.mp-recycling-section{
+    padding-bottom: 0;
+    
+    &__container{
+        transition: all 1s;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+        justify-items: center;
+
+        @include responsive(phone){  
+            grid-template-columns: 1fr;
+        }
+        &-heading{
+            grid-column: 2/3;
+            margin: 0;
+
+            @include responsive(phone){  
+                margin-bottom: 5rem;
+                grid-row: 1/2;
+                grid-column: 1/2;
+                
+            }
+        }
+        &-img{
+            width: 30rem;
+            bottom: 0;
+            grid-column: 1/2;
+            grid-row: 1/ 3;
+
+            @include responsive(phone){  
+                grid-row: 2 / 3;
+                transform: rotate(-90deg);
+                margin-left: auto; 
+            }
+            
+            @media screen and (max-width: 400px) {
+                 width: 20rem;
+            }
+    
+            
+        }
+    
+        &-info{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+           
+            @include responsive(phone){  
+                &-subheading, &-btn{
+                    margin: 3rem;
+                }
+
+            }
+        }
+
+        
+    }
+   
+
+    
+
+    
+}
+
+
+.choose-section{
+    background-color: $color-primary-lighter;
+    
+    &__heading{
+        margin: 0 auto 5rem auto;
+    }
+    
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
+
+        @include responsive(tab-small){  
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+        }        
+    }  
+}
+
+.how-it-works{
+
+    &__heading{
+        text-align: left;
+        @include responsive(phone){  
+            text-align: center;
+        }
+    }
+
+    &__container{ 
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+        justify-items: center;
+
+        @include responsive(phone){  
+            grid-template-columns: 1fr;
+        
+        }
+        &-info{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            
+            
+            @include responsive(phone){  
+            
+                &-subheading, &-btn{
+                    margin: 3rem;
+                }
+            }
+            
+        }
+
+        
+
+        &-img{
+            width: 100%;
+            height: auto;
+
+            @include responsive(phone){  
+                width: 70%;
+                grid-row: 1/2;
+            }
+        }
+
+        
+    }
+}
+
+
+@supports not (height: 100%){
+    
+    .how-it-works__container-info{
+        height: 0px;
+    }
+}
+
+
+.banner-section{
+    width: 70%;
+    height: max-content;
+    padding: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10rem auto;
+
+    @include responsive(tab-small){  
+        width: 80%;
+        padding: 1rem;
+        flex-direction: column;
+    }
+    @include responsive(phone){  
+        width: 95%;
+    }
+
+    &__info{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+
+        &-heading{
+            text-transform: none;
+            margin-bottom: 2rem;
+            color: $color-white;
+
+            @include responsive(phone){  
+                font-size: 3rem;
+            }
+        }
+
+        
+    }
+
+    &__list{
+        width: 30%;
+
+        @include responsive(tab-small){  
+            width: max-content;
+            margin: 2rem;
+            display: grid;
+            grid-template-columns: max-content max-content;
+            
+        }
+        &-item{
+           
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem; 
+            margin: .5rem;
+            color: $color-white;
+
+            &-img{
+                color: $color-primary;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+
+
+
+

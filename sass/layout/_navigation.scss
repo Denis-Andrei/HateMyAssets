@@ -1,0 +1,163 @@
+.navigation{
+    width: 100%;
+    height: max-content;
+    position: fixed;
+    background-color:  $color-white;
+    z-index: 9999;
+    transition: all .5s;
+    
+    &-onScroll{
+        position: fixed;
+        top: 0;
+        // opacity: 0.9;
+        box-shadow: .2px 3px 3px $color-gray;
+
+
+        .navigation__logo{
+            height: 6rem;
+        }
+
+        .navigation__hamburger{
+            top: 1rem;
+        }
+    }
+    
+    &__container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        transition: all .5s;
+        
+        @include responsive(tab-large){  
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+       
+    }
+
+    &__logo{
+        height: 8rem;
+        transition: all .5s;
+        
+    } 
+
+    &__list{
+        display: flex;
+        
+         
+        @include responsive(tab-large){ 
+            align-self: center;
+            flex-direction: column;
+            display: none;
+        }
+        
+        &-open{
+            display: flex;
+        }
+    }
+
+    &__item{
+        list-style-type: none;
+        text-align: center; 
+
+        &:not(:last-child){
+           margin-right: 3rem;
+        }
+
+        @include responsive(tab-large){ 
+            
+            padding: 2rem;
+
+            &:not(:last-child){
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__link{
+        font-size: $default-font-size;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-gray;
+        
+        &-active{
+            color: $color-primary;
+        }
+
+        &:hover{
+            color: $color-primary;
+        } 
+    }
+
+    &__hamburger{
+        display: none;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        text-align: center;
+        cursor: pointer;
+        
+        @include responsive(tab-large){ 
+            display: flex;
+        }
+
+        &-icon{
+            position: relative;
+            border-radius: 10px;
+            margin-top: 3rem;
+
+            &,&::before, &::after{
+                width: 3rem;
+                height: 2px;
+                background-color: $color-gray;
+                display: inline-block;
+                border-radius: 10px;
+                transition: all .2s;
+            }
+
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                left: 0; 
+            }
+
+            &::before{
+                top: -8px;
+                
+            }
+            &::after{
+                top: 8px;
+            }
+
+            // MENU ICON CLOSE
+            &-close{
+                background-color: transparent;
+            
+                &::before{
+                    
+                    top:0;
+                    transform: rotate(45deg);
+                        
+                    }
+                &::after{
+                    top:0;
+                    transform: rotate(-45deg);
+                } 
+            }
+
+            
+        }
+        
+    }
+}
+
+
+// "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" wp-content/themes/hatemyphone-theme/style.comp.css -o wp-content/themes/hatemyphone-theme/style.css"

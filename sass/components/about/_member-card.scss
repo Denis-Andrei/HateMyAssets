@@ -1,0 +1,29 @@
+.member-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include responsive(phone){
+        margin-top: 2rem;
+    }
+     
+    &__img{
+        width: 15rem;
+        height: 15rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__position{
+        margin: 1rem;
+        text-align: center;
+    }
+
+    &__social-icon{
+        margin: .5rem;
+        font-size: 2rem;
+        color: $color-linkedin;
+    }
+
+}

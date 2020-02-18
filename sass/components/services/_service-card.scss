@@ -1,0 +1,48 @@
+.service-card{
+    width: 70%;
+    margin: 10rem auto;
+    padding: 0 3rem 3rem 3rem;
+    background-color: $color-gray-lighter;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px $color-gray-lighter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .2s;
+
+    @include responsive(phone){
+        width: 100%;
+    }
+    
+    &:hover{      
+        transform: translateY(-3px);
+        box-shadow: 1px 1px 5px $color-gray;
+    }
+
+    &__circle{
+        width: 10rem;
+        height: 10rem;
+        margin-top: -5rem;
+        border-radius: 50px;
+        background-color: $color-gray-lighter;
+        box-shadow: 1px 1px 5px  $color-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-img{
+            width: 70%;
+        }
+    }
+
+    &__title{
+        align-self: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    &__text{
+        text-align: left;
+    }
+    
+}
+

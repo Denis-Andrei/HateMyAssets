@@ -1,0 +1,39 @@
+.requirements{
+    width: 80%;
+    margin: 5rem auto;
+    padding: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgb(212, 212, 212);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include responsive(tab-small){
+        width: 90%;
+    }
+
+   
+
+    &__list{
+        margin-top: 3rem;
+        list-style-type: none;
+
+        &-item{
+            font-size: $default-font-size;
+            text-transform: uppercase;
+            color: $color-gray-lighter;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            
+            i{
+                color: $color-primary;
+                font-size: 2rem;
+                margin: 1rem;
+            }
+        }
+    }
+}

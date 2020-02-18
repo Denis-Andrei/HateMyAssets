@@ -1,0 +1,84 @@
+.newsletter-form{
+
+    .mc4wp-form-fields{ //div added from mailchimp
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        
+
+        @include responsive(tab-large){  
+            width: 90%;
+            
+        }
+        @include responsive(tab-small){  
+            width: 70%;
+            flex-direction: column;
+            
+        }
+        @include responsive(phone){  
+            width: 80%;
+        }
+    }
+    
+    .mc4wp-response{
+        font-size: 2rem;
+
+        
+        .mc4wp-alert{
+            text-align: center;
+            margin: 1rem auto;
+            padding: 2rem;
+            border-radius: 3px; 
+            color: $color-white;
+        }
+
+        .mc4wp-success{
+            background-color: $color-succes;
+            border: 1px solid $color-succes-darker;
+            color: $color-succes-darker;
+            
+        }
+        .mc4wp-notice{
+            background-color: $color-notice;
+            border: 1px solid $color-notice-darker;
+            color: $color-notice-darker;
+        }
+        .mc4wp-error{
+            background-color: $color-error;
+            border: 1px solid $color-error-darker;
+            color: $color-error-darker;
+        }
+    }
+    
+        
+    
+    &__input{
+        width: 50%;
+        margin-right: .5rem;
+        padding-left: 1rem;
+        font-family: inherit;
+        border: 1px solid $color-gray;
+        border-radius: 3px;
+        outline: none;
+        
+        
+        &:focus{
+            background-color: $color-primary-lighter;
+        }
+        
+        @include responsive(tab-small){  
+            width: 100%;
+            padding: 1.5rem;
+        }
+    }
+
+    
+
+    &__btn{
+        margin: 0;
+        @include responsive(tab-small){  
+            margin: 1rem auto;
+        }
+    }
+}

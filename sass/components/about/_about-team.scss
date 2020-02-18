@@ -1,0 +1,20 @@
+.about-team{
+    padding: 5rem 0;
+    &-members{
+        width: 70%;
+        margin: 5rem auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive(tab-large){
+            width: 80%;
+        }
+        @include responsive(tab-small){
+            width: 90%;
+        }
+        @include responsive(phone){
+            flex-direction: column;
+        } 
+        
+    }
+}
